@@ -1,18 +1,15 @@
-package fdbst.springcourse.msscbrewery.web.model;
+package fdbst.springcourse.msscbrewery.web.model.v2;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Null;
-import javax.validation.constraints.Positive;
 import java.util.UUID;
 
 /**
- * Classe BeerDTO
- *
+ * Classe BeerDTOV2
+ * <p>
  * Essa classe é responsável por...
  *
  * @author Felipe Di Bernardi S Thiago
@@ -21,17 +18,9 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeerDTO {
-
-    @Null
+public class BeerDTOV2 {
     private UUID id;
-
-    @NotBlank
     private String beerName;
-
-    @NotBlank
-    private String beerStyle;
-
-    @Positive
+    private BeerStyleEnum beerStyle;
     private Long upc;
 }
