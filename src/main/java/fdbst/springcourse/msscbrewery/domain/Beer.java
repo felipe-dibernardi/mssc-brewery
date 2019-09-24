@@ -1,17 +1,18 @@
-package fdbst.springcourse.msscbrewery.web.model.v2;
+package fdbst.springcourse.msscbrewery.domain;
 
+import fdbst.springcourse.msscbrewery.web.model.v2.BeerStyleEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.OffsetDateTime;
+import java.sql.Timestamp;
 import java.util.UUID;
 
 /**
- * Classe BeerDTOV2
- * <p>
- * Essa classe é responsável por...
+ * Classe Beer
+ * 
+ * Essa classe ...
  *
  * @author Felipe Di Bernardi S Thiago
  */
@@ -19,13 +20,12 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BeerDTOV2 {
+public class Beer {
     private UUID id;
     private String beerName;
     private BeerStyleEnum beerStyle;
     private Long upc;
 
-    private OffsetDateTime createdDate;
-
-    private OffsetDateTime lastUpdatedDate;
+    private Timestamp createdDate;
+    private Timestamp lastUpdatedDate;
 }
